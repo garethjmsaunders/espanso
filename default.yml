@@ -110,7 +110,7 @@ matches:
       replace: "á"
 
     - trigger: "e''"
-      replace: "é"      
+      replace: "é"
 
     - trigger: "i''"
       replace: "í"
@@ -180,7 +180,7 @@ matches:
         - name: yesterday
           type: date
           params:
-            format: "%A%e %B %Y"
+            format: "%A %e %B %Y"
             offset: -86400
 
     - trigger: "--tom"
@@ -189,7 +189,7 @@ matches:
         - name: tomorrow
           type: date
           params:
-            format: "%A%e %B %Y"
+            format: "%A %e %B %Y"
             offset: 86400
 
 
@@ -199,7 +199,7 @@ matches:
         - name: now
           type: date
           params:
-            format: "%A%e %B %Y, %H:%M"
+            format: "%A %e %B %Y, %H:%M"
 
     # Agile
 

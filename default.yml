@@ -7,8 +7,8 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 
-# version:      1.0.0
-# updated:      Saturday 31 July 2021
+# version:      1.0.1
+# updated:      Sunday 3 October 2021
 # Windows path: C:\Users\garet\AppData\Roaming\espanso
 # Linux path:   /home/user/.config/espanso
 

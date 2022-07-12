@@ -7,8 +7,8 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 
-# version:      1.0.1
-# updated:      Sunday 3 October 2021
+# version:      1.0.0
+# updated:      Saturday 31 July 2021
 # Windows path: C:\Users\garet\AppData\Roaming\espanso
 # Linux path:   /home/user/.config/espanso
 
@@ -22,8 +22,23 @@ matches:
     - trigger: "--@g"
       replace: "garethjmsaunders@gmail.com"
 
+    - trigger: "--@i"
+      replace: "isaacjnsaunders@gmail.com"
+
+    - trigger: "--@j"
+      replace: "joshuapwsaunders@gmail.com"
+
+    - trigger: "--@r"
+      replace: "reubenjmsaunders@gmail.com"
+
+    - trigger: "--@sec"
+      replace: "secdigitalcalendar@gmail.com"
+
     - trigger: "--@w"
-      replace: "gareth.saunders@sky.uk"
+      replace: "GarethSaunders@safeguardglobal.com"
+
+    - trigger: "--@195"
+      replace: "195metalcds@gmail.com"
 
     # Gareth
 
@@ -43,10 +58,13 @@ matches:
       replace: "KY10 3UX"
 
     - trigger: "--sig"
-      replace: "--\n\nGareth J M Saunders\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n+44 (0)1333 451369 home\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"
+      replace: "--\n\nGareth J M Saunders\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n+44 (0)1333 451369 home\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"
 
     - trigger: "--rsig"
-      replace: "--\n\nThe Revd Gareth J M Saunders, BD (hons), MTh\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n+44 (0)1333 451369 home\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"    
+      replace: "--\n\nThe Revd Gareth J M Saunders, BD (hons), MTh\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n+44 (0)1333 451369 home\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"    
+
+    - trigger: "--195sig"
+      replace: "--\n\nGareth J M Saunders\n195 metal CDs | Independent metal, hardcore, punk and rock reviews from Scotland\n\n195metalcds@gmail.com\nwww.195metalcds.com"
 
     - trigger: "--gjms"
       replace: "Gareth J M Saunders"
@@ -89,14 +107,26 @@ matches:
     - trigger: "--dct"
       replace: "digital communications team"
 
+    - trigger: "--espanso"
+      replace: "C:\\Users\\garet\\AppData\\Roaming\\espanso"
+
     - trigger: "--nycgb"
       replace: "National Youth Choir of Great Britain"
+
+    - trigger: "--cdreview"
+      replace: "## Details\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\nBandcamp | Encyclopaedia Metallum | Facebook | Instagram | Soundcloud | Tiktok | Twitter | Website | YouTube\n\n## Band\n\n* Vocals, Guitar, Bass, Keyboard, Other, Drums\n\n## Tracks\n\n1. Track 1\n2. Track 2\n\n## Review\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n## Conclusion\n\nReview score: %\n\n## Video\n\nLINK_TO_YOUTUBE\n\n## Disclosure\n\nPROMOTER contacted me inviting me to preview BAND_NAME forthcoming album, which I was delighted about.\n\nI have no connections to either PROMOTER or BAND. I’m not being paid to review this. But I did get a free digital copy of the album to review which is pretty cool.\n\nMany thanks to NAME from PROMOTER, and to BAND for continuing to create fresh, exciting GENRE.\n\n## Notes"
 
     - trigger: "--rji"
       replace: "Reuben, Joshua and Isaac"
 
+    - trigger: "--sec"
+      replace: "Scottish Episcopal Church"
+
     - trigger: "--sta"
       replace: "University of St Andrews"
+
+    - trigger: "--wp"
+      replace: "/wp-admin/"
 
 # Spanish
 
@@ -172,7 +202,7 @@ matches:
         - name: today
           type: date
           params:
-            format: "%A%e %B %Y"
+            format: "%A %d %B %Y"
 
     - trigger: "--yest"
       replace: "{{yesterday}}"
@@ -180,7 +210,7 @@ matches:
         - name: yesterday
           type: date
           params:
-            format: "%A%e %B %Y"
+            format: "%A %d %B %Y"
             offset: -86400
 
     - trigger: "--tom"
@@ -189,7 +219,7 @@ matches:
         - name: tomorrow
           type: date
           params:
-            format: "%A%e %B %Y"
+            format: "%A %d %B %Y"
             offset: 86400
 
 
@@ -199,7 +229,7 @@ matches:
         - name: now
           type: date
           params:
-            format: "%A%e %B %Y, %H:%M"
+            format: "%A %d %B %Y, %H:%M"
 
     # Agile
 

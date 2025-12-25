@@ -1,0 +1,468 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+
+# version:      2.0.0
+# updated:      Wednesday 24 December 2025
+# Windows path: C:\Users\garet\AppData\Roaming\espanso
+# Linux path:   /home/user/.config/espanso
+
+# TABLE OF CONTENTS
+#
+# 195 metal CDs
+# Agile
+# Corrections
+# Dates
+# Digital Shed45
+# Email
+# Emoji
+# Gareth
+# General
+# HTML
+# Language : French
+# Language : Spanish
+# Paths
+# SEC digital calendar
+# Typography
+# University of St Andrews
+
+
+matches:
+
+    # 195 metal CDs
+
+    - trigger: "--195chat"
+      replace: "I am a music blogger who reviews rock, metal, and punk albums in Markdown format. I write in a thoughtful, emotionally aware tone, blending technical analysis with personal commentary. I value genre-blending, strong production, and melodic content, and I sometimes refer to my regular readers in a conversational tone.\n\nI will provide:\n\n* A press release (for background and promo copy)\n* A track list with my personal notes about each song\n\n(1) WRITE A REVIEW\n\n* Please generate a first draft of the review using the structure and style below.\n* You can borrow key factual info from the press release, but reword it in my voice.\n* Use my notes to guide your review section, especially highlighting tracks I found notable.\n* IMPORTANT: Format your draft review using Markdown and follow this structure exactly:\n\n## Details\n\n{Include release info such as producer, mixer, release date. Mention similar artists using the format: \"For fans of:\". Include relevant social/media links in this order and separated by the pipe character like this (in Markdown, and removing any links that are not available): ' | ': Bandcamp | Encyclopaedia Metallum | Facebook | Instagram | Soundcloud | Spotify | Tiktok | Twitter | Website | YouTube.}\n\n## Band\n\n* Vocals\n* Guitar\n* Bass\n* Drums\n* Other instruments (if applicable)\n\n## Tracks\n\n1. Track name\n2. Track name\n3. ...\n\n## Review\n\n{Write an insightful, emotionally aware review. Use vivid language and reflect on the listening experience, notable moments, stand-out tracks, production quality, and mood. Mention specific track highlights. It’s okay to critique constructively.}\n\n{After you mention each track in the review, follow it with the track number, for example: \"Exciting song title\" (track 1).}\n\n## Conclusion\n\n{Summarise your verdict on the album. Include personal reflections or comments on how long you’ve been listening. Add the review score as a percentage.}\n\n## Video\n\n[LINK_TO_YOUTUBE]\n\n## Disclosure\n\n{PROMOTER_NAME} contacted me inviting me to preview {BAND_NAME}’s forthcoming album, thank you. I have no connections to either {PROMOTER_NAME} or {BAND_NAME}. I’m not being paid to review this, but I did get a free {digital} copy of the album to review which is pretty cool. Many thanks to {CONTACT_NAME} from {PROMOTER_NAME}, and to {BAND_NAME} for continuing to create fresh, exciting {GENRE}.}\n\n(2) WRITE AN EXCERPT\n\nWrite a conversational, reflective excerpt (maximum of 50 words) in first person for WordPress. It should read like the emotional takeaway or a lingering thought, as if lifted from the review. Keep it informal and authentic. Avoid listing facts. Length must be under 50 words.\n\nExample: There’s a moment on track three that just floored me. I’ve had this album on loop all week—it’s that good.\n\n(3) PRESS RELEASE\n\nPROMOTER_NAME\n\nPRESS_RELEASE_HERE\n\n(4) TRACK LIST AND GARETH'S NOTES\n\nGARETH_NOTES"
+
+    - trigger: "--195template"
+      replace: "## Details\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\nBandcamp | Encyclopaedia Metallum | Facebook | Instagram | Soundcloud | Tiktok | Twitter | Website | YouTube\n\n## Band\n\n* Vocals, Guitar, Bass, Keyboard, Other, Drums\n\n## Tracks\n\n1. Track 1\\n2. Track 2\n\n## Review\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit.\n\n## Conclusion\n\nReview score: %\n\n## Video\n\nLINK_TO_YOUTUBE\n\n## Disclosure\n\nPROMOTER contacted me inviting me to preview BAND_NAME 's forthcoming album, thank you. I have no connections to either PROMOTER or BAND. I’m not being paid to review this, but I did get a free digital copy of the album to review which is pretty cool. Many thanks to NAME from PROMOTER, and to BAND for continuing to create fresh, exciting GENRE.\n\n## Notes"
+
+    - trigger: "--195sig"
+      replace: "--\n\nGareth J M Saunders\n195 metal CDs | Independent metal, hardcore, punk and rock reviews from Scotland\n\n195metalcds@gmail.com\nwww.195metalcds.com"
+
+    # Agile
+
+    - trigger: "--5thieves"
+      replace: "Five thieves of time\n\n1. Too much work-in-progress (WIP)\n2. Unknown dependencies\n3. Unplanned work\n4. Conflicting priorities\n5. Neglected work\n\nDominica DeGrandis, Making Work Visible: Exposing Time Theft to Optimize Workflow (2017)"
+
+    - trigger: "--agilemanifesto"
+      replace: "We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:\n\nIndividuals and interactions over processes and tools\nWorking software over comprehensive documentation\nCustomer collaboration over contract negotiation\nResponding to change over following a plan\n\nThat is, while there is value in the items on the right, we value the items on the left more."
+
+    - trigger: "--boscard"
+      replace: "background, objectives, scope, constraints, assumptions, risks and deliverables"
+
+    - trigger: "--pestle"
+      replace: "political, economic, socio-cultural, technological, legal, and environmental"
+
+    - trigger: "--scrumvalues"
+      replace: "commitment, courage, focus, openness, respect"
+
+    - trigger: "--smast"
+      replace: "scrum master"
+
+    - trigger: "--smart"
+      replace: "specific, measurable, achievable, relevant and time-bound"
+
+
+    # Corrections
+
+    - trigger: "creme fraiche"
+      replace: "crème fraîche"
+
+    - trigger: "crepe"
+      replace: "crêpe"
+
+    - trigger: "THanks"
+      replace: "Thanks"
+
+    - trigger: "THe"
+      replace: "The"      
+
+
+    # Dates
+
+    # Yesterday (ISO) 2025-12-23
+    - trigger: "--dddc"
+      replace: "{{isodate}}"
+      vars:
+        - name: isodate
+          type: date
+          params:
+            format: "%Y-%m-%d"
+            offset: -86400
+
+    # Yesterday Tuesday 23 December 2025
+    - trigger: "--yest"
+      replace: "{{yesterday}}"
+      vars:
+        - name: yesterday
+          type: date
+          params:
+            format: "%A %d %B %Y"
+            offset: -86400
+
+
+    # Today (ISO) 2025-12-24
+    - trigger: "--dddd"
+      replace: "{{isodate}}"
+      vars:
+        - name: isodate
+          type: date
+          params:
+            format: "%Y-%m-%d"
+
+    # Today Wednesday 24 December 2025
+    - trigger: "--today"
+      replace: "{{today}}"
+      vars:
+        - name: today
+          type: date
+          params:
+            format: "%A %d %B %Y"
+
+
+    # Tomorrow (ISO) 2025-12-25
+    - trigger: "--ddde"
+      replace: "{{isodate}}"
+      vars:
+        - name: isodate
+          type: date
+          params:
+            format: "%Y-%m-%d"
+            offset: 86400
+
+    # Tomorrow Thursday 25 December 2025
+    - trigger: "--tom"
+      replace: "{{tomorrow}}"
+      vars:
+        - name: tomorrow
+          type: date
+          params:
+            format: "%A %d %B %Y"
+            offset: 86400
+
+
+    # Now Wednesday 24 December 2025, 21:15
+    - trigger: "--now"
+      replace: "{{now}}"
+      vars:
+        - name: now
+          type: date
+          params:
+            format: "%A %d %B %Y, %H:%M"
+
+
+    # Digital Shed45
+
+    - trigger: "--dsig"
+      replace: "--\n\nGareth J M Saunders\n\nDigital Shed45\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\ndigitalshed45@gmail.com\nhttps://digitalshed45.co.uk"
+
+    - trigger: "--pp"
+      replace: "Pittenweem Properties"
+
+    - trigger: "--kabc"
+      replace: "Kilrenny & Anstruther Burgh Collection"
+
+          
+    # Email
+
+    - trigger: "--@195"
+      replace: "195metalcds@gmail.com"
+
+    - trigger: "--@ch"
+      replace: "secdigitalcalendar@gmail.com"
+
+    - trigger: "--@d"
+      replace: "digitalshed45@gmail.com"
+
+    - trigger: "--@e"
+      replace: "gareth@garethjmsaunders.co.uk"
+
+    - trigger: "--@g"
+      replace: "garethjmsaunders@gmail.com"
+
+    - trigger: "--@i"
+      replace: "isaacjnsaunders@gmail.com"
+
+    - trigger: "--@j"
+      replace: "joshuapwsaunders@gmail.com"
+
+    - trigger: "--@r"
+      replace: "reubenjmsaunders@gmail.com"
+
+    - trigger: "--@s"
+      replace: "gjms1@st-andrews.ac.uk"
+
+
+    # Emoji
+
+    - trigger: "--;)"
+      replace: "😉"
+
+    - trigger: "--cry"
+      replace: "😢"
+
+    - trigger: "--flushed"
+      replace: "😳"
+
+    - trigger: "--lol"
+      replace: "😂"
+
+    - trigger: "--rofl"
+      replace: "🤣"
+
+    - trigger: "--weep"
+      replace: "😭"  
+
+
+    # Gareth
+
+    - trigger: "--address"
+      replace: "14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX"
+
+    - trigger: "--add1"
+      replace: "14 Balcomie Green"
+
+    - trigger: "--add2"
+      replace: "Crail"
+
+    - trigger: "--add3"
+      replace: "Anstruther"
+
+    - trigger: "--pc"
+      replace: "KY10 3UX"
+
+    - trigger: "--sig"
+      replace: "--\n\nGareth J M Saunders\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n+44 (0)1333 451369 home\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"
+
+    - trigger: "--rsig"
+      replace: "--\n\nThe Revd Gareth J M Saunders, BD (hons), MTh\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n+44 (0)1333 451369 home\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"    
+
+    - trigger: "--gjms"
+      replace: "Gareth J M Saunders"
+
+    - trigger: "--gs"
+      replace: "Gareth Saunders"    
+
+    - trigger: "--fn"
+      replace: "Gareth John McKeith Saunders"
+
+    - trigger: "--rev"
+      replace: "The Revd Gareth J M Saunders"    
+
+    - trigger: "--mob"
+      replace: "07732 356123"
+
+    - trigger: "--44mob"
+      replace: "+44 (0)7732 356123"
+
+    - trigger: "--mb"
+      replace: "07732356123"  
+
+
+# General
+
+    - trigger: "--abh"
+      replace: "Agnes Blackadder Hall"
+
+    - trigger: "--a8c"
+      replace: "Automattic"
+
+    - trigger: "--nycgb"
+      replace: "National Youth Choir of Great Britain"
+
+    - trigger: "--project"
+      replace: "# Summary\n\nDescription of the project. What does this involve? What are the reasons for doing this, what are my motivations, what difference will this make?\n\n---\n\n# Goals supported\n\nWhich of my goals are supported?\n\n1. Live a simple life\n2. Live meaningfully and with purpose\n3. Do not be greedy\n4. Pray daily\n5. Drink plenty of water each day\n6. Rest and relaxation is important for productivity and creativity\n7. Sleep for 7½ to 8 hours per night\n8. Spend more time with friends and family\n9. Exercise frequently\n10. Eat healthily\n11. Read more\n12. Write more\n13. Be organised\n14. Believe in yourself\n\n---\n\n# Objectives\n\n1. objective\n1. objective\n1. objective\n\n---\n\n# Acceptance criteria\n\n1. criteria\n1. criteria\n1. criteria\n\n---\n\n# Metrics\n\n1. metric\n1. metric\n1. metric"
+
+    - trigger: "--reg"
+      replace: "SY63 NZF"
+
+    - trigger: "--rji"
+      replace: "Reuben, Joshua and Isaac"
+
+    - trigger: "--sec"
+      replace: "Scottish Episcopal Church"
+
+    - trigger: "--ty"
+      replace: "Thank you"
+
+    - trigger: "--uc"
+      replace: "Universal Credit"
+
+
+# HTML
+
+    - trigger: "<>tel"
+      replace: "<a href=\"tel:+44\">"
+
+
+# Language : French
+
+    # a grave (à)
+    - trigger: "a``"
+      replace: "à"
+
+    # cedilla (ç)
+    - trigger: "c``"
+      replace: "ç"
+
+    # e grave (è)
+    - trigger: "e``"
+      replace: "è"
+
+    # e circumflex (ê)
+    - trigger: "e^^"
+      replace: "ê"
+
+    # e diaeresis  (ë)
+    - trigger: "e::"
+      replace: "ë"                        
+
+
+# Language : Spanish
+
+    - trigger: "--!"
+      replace: "¡"
+
+    - trigger: "--?"
+      replace: "¿"
+
+    - trigger: "a''"
+      replace: "á"
+
+    - trigger: "e''"
+      replace: "é"
+
+    - trigger: "i''"
+      replace: "í"
+
+    - trigger: "n~~"
+      replace: "ñ"
+
+    - trigger: "o''"
+      replace: "ó"
+
+    - trigger: "u''"
+      replace: "ú"
+
+
+# Lorem ipsum
+
+    - trigger: "--lorem0"
+      replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a justo sit amet risus volutpat finibus ut nec risus. Pellentesque massa velit, posuere vel congue at, posuere id arcu. Vivamus urna mi, suscipit non turpis vitae, aliquam tempor justo. Proin lectus ante, dignissim mollis velit mattis, finibus tincidunt libero. Sed dignissim aliquet tempus."
+
+    - trigger: "--lorem1"
+      replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a justo sit amet risus volutpat finibus ut nec risus. Pellentesque massa velit, posuere vel congue at, posuere id arcu. Vivamus urna mi, suscipit non turpis vitae, aliquam tempor justo. Proin lectus ante, dignissim mollis velit mattis, finibus tincidunt libero. Sed dignissim aliquet tempus. Maecenas luctus ligula mi, eu vestibulum lectus viverra a. Praesent non pharetra orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lobortis nulla et velit semper tempus. Nullam ut maximus sem, nec consectetur velit. Proin accumsan, nunc in dictum sagittis, risus elit interdum lorem, tincidunt cursus lorem risus at ligula."
+
+    - trigger: "--lorem2"
+      replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a justo sit amet risus volutpat finibus ut nec risus. Pellentesque massa velit, posuere vel congue at, posuere id arcu. Vivamus urna mi, suscipit non turpis vitae, aliquam tempor justo. Proin lectus ante, dignissim mollis velit mattis, finibus tincidunt libero. Sed dignissim aliquet tempus. Maecenas luctus ligula mi, eu vestibulum lectus viverra a. Praesent non pharetra orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lobortis nulla et velit semper tempus. Nullam ut maximus sem, nec consectetur velit. Proin accumsan, nunc in dictum sagittis, risus elit interdum lorem, tincidunt cursus lorem risus at ligula.\n\nCurabitur rutrum facilisis purus, sit amet posuere orci ullamcorper id. Nullam quis est pharetra, lobortis ipsum aliquet, vehicula sem. Praesent ipsum sem, laoreet ac dui eget, aliquet luctus magna. Suspendisse mattis sollicitudin commodo. Nullam accumsan porta fermentum. Aliquam erat volutpat. Suspendisse feugiat magna leo. Quisque mattis fringilla massa, vel rutrum sem sollicitudin hendrerit. Cras interdum gravida nibh, ut viverra leo ultrices sed. Fusce orci mi, hendrerit vitae nibh id, auctor eleifend est. Nunc porta tristique leo quis mollis. Sed lacinia vulputate lacus, sed finibus mauris bibendum quis."
+
+    - trigger: "--lorem3"
+      replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a justo sit amet risus volutpat finibus ut nec risus. Pellentesque massa velit, posuere vel congue at, posuere id arcu. Vivamus urna mi, suscipit non turpis vitae, aliquam tempor justo. Proin lectus ante, dignissim mollis velit mattis, finibus tincidunt libero. Sed dignissim aliquet tempus. Maecenas luctus ligula mi, eu vestibulum lectus viverra a. Praesent non pharetra orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lobortis nulla et velit semper tempus. Nullam ut maximus sem, nec consectetur velit. Proin accumsan, nunc in dictum sagittis, risus elit interdum lorem, tincidunt cursus lorem risus at ligula.\n\nCurabitur rutrum facilisis purus, sit amet posuere orci ullamcorper id. Nullam quis est pharetra, lobortis ipsum aliquet, vehicula sem. Praesent ipsum sem, laoreet ac dui eget, aliquet luctus magna. Suspendisse mattis sollicitudin commodo. Nullam accumsan porta fermentum. Aliquam erat volutpat. Suspendisse feugiat magna leo. Quisque mattis fringilla massa, vel rutrum sem sollicitudin hendrerit. Cras interdum gravida nibh, ut viverra leo ultrices sed. Fusce orci mi, hendrerit vitae nibh id, auctor eleifend est. Nunc porta tristique leo quis mollis. Sed lacinia vulputate lacus, sed finibus mauris bibendum quis.\n\nVestibulum rutrum purus non magna imperdiet, vel dignissim leo condimentum. Aenean at lectus in urna molestie tincidunt faucibus vel ligula. Aenean faucibus ante risus. Donec augue mauris, congue sit amet bibendum eget, aliquet vel arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse quis consectetur magna. Sed id nisi fermentum, ornare ante vitae, ornare massa. Etiam non eros nec neque iaculis imperdiet. Pellentesque maximus nulla eget neque ornare porta. Nulla tincidunt consequat est, ac finibus urna efficitur et. Nullam vel aliquet diam, ac finibus diam. Sed sed dolor efficitur, vulputate risus sit amet, efficitur urna."
+
+    - trigger: "--lorem4"
+      replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a justo sit amet risus volutpat finibus ut nec risus. Pellentesque massa velit, posuere vel congue at, posuere id arcu. Vivamus urna mi, suscipit non turpis vitae, aliquam tempor justo. Proin lectus ante, dignissim mollis velit mattis, finibus tincidunt libero. Sed dignissim aliquet tempus. Maecenas luctus ligula mi, eu vestibulum lectus viverra a. Praesent non pharetra orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lobortis nulla et velit semper tempus. Nullam ut maximus sem, nec consectetur velit. Proin accumsan, nunc in dictum sagittis, risus elit interdum lorem, tincidunt cursus lorem risus at ligula.\n\nCurabitur rutrum facilisis purus, sit amet posuere orci ullamcorper id. Nullam quis est pharetra, lobortis ipsum aliquet, vehicula sem. Praesent ipsum sem, laoreet ac dui eget, aliquet luctus magna. Suspendisse mattis sollicitudin commodo. Nullam accumsan porta fermentum. Aliquam erat volutpat. Suspendisse feugiat magna leo. Quisque mattis fringilla massa, vel rutrum sem sollicitudin hendrerit. Cras interdum gravida nibh, ut viverra leo ultrices sed. Fusce orci mi, hendrerit vitae nibh id, auctor eleifend est. Nunc porta tristique leo quis mollis. Sed lacinia vulputate lacus, sed finibus mauris bibendum quis.\n\nVestibulum rutrum purus non magna imperdiet, vel dignissim leo condimentum. Aenean at lectus in urna molestie tincidunt faucibus vel ligula. Aenean faucibus ante risus. Donec augue mauris, congue sit amet bibendum eget, aliquet vel arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse quis consectetur magna. Sed id nisi fermentum, ornare ante vitae, ornare massa. Etiam non eros nec neque iaculis imperdiet. Pellentesque maximus nulla eget neque ornare porta. Nulla tincidunt consequat est, ac finibus urna efficitur et. Nullam vel aliquet diam, ac finibus diam. Sed sed dolor efficitur, vulputate risus sit amet, efficitur urna.\n\nDonec eu ex a ligula tincidunt pretium sed mollis libero. Pellentesque accumsan consequat aliquet. Vestibulum semper erat eget purus blandit maximus. Curabitur nunc ipsum, vulputate et varius eu, fringilla ut ante. Maecenas ultricies nisl eu purus rutrum posuere. Etiam aliquam felis eu dui laoreet lacinia. Vestibulum fringilla massa ante, sit amet porttitor augue interdum quis. Morbi porta justo in tempus lacinia. Nullam porta ut turpis quis porta. Sed risus libero, blandit eu tempus ut, egestas nec erat. Pellentesque malesuada nunc ac ante posuere suscipit. Quisque pretium condimentum ipsum, ac feugiat est venenatis vel. Proin nulla turpis, cursus vitae dignissim sed, vulputate in velit. Maecenas nec nulla ut enim interdum eleifend."
+
+    - trigger: "--lorem5"
+      replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a justo sit amet risus volutpat finibus ut nec risus. Pellentesque massa velit, posuere vel congue at, posuere id arcu. Vivamus urna mi, suscipit non turpis vitae, aliquam tempor justo. Proin lectus ante, dignissim mollis velit mattis, finibus tincidunt libero. Sed dignissim aliquet tempus. Maecenas luctus ligula mi, eu vestibulum lectus viverra a. Praesent non pharetra orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lobortis nulla et velit semper tempus. Nullam ut maximus sem, nec consectetur velit. Proin accumsan, nunc in dictum sagittis, risus elit interdum lorem, tincidunt cursus lorem risus at ligula.\n\nCurabitur rutrum facilisis purus, sit amet posuere orci ullamcorper id. Nullam quis est pharetra, lobortis ipsum aliquet, vehicula sem. Praesent ipsum sem, laoreet ac dui eget, aliquet luctus magna. Suspendisse mattis sollicitudin commodo. Nullam accumsan porta fermentum. Aliquam erat volutpat. Suspendisse feugiat magna leo. Quisque mattis fringilla massa, vel rutrum sem sollicitudin hendrerit. Cras interdum gravida nibh, ut viverra leo ultrices sed. Fusce orci mi, hendrerit vitae nibh id, auctor eleifend est. Nunc porta tristique leo quis mollis. Sed lacinia vulputate lacus, sed finibus mauris bibendum quis.\n\nVestibulum rutrum purus non magna imperdiet, vel dignissim leo condimentum. Aenean at lectus in urna molestie tincidunt faucibus vel ligula. Aenean faucibus ante risus. Donec augue mauris, congue sit amet bibendum eget, aliquet vel arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse quis consectetur magna. Sed id nisi fermentum, ornare ante vitae, ornare massa. Etiam non eros nec neque iaculis imperdiet. Pellentesque maximus nulla eget neque ornare porta. Nulla tincidunt consequat est, ac finibus urna efficitur et. Nullam vel aliquet diam, ac finibus diam. Sed sed dolor efficitur, vulputate risus sit amet, efficitur urna.\n\nDonec eu ex a ligula tincidunt pretium sed mollis libero. Pellentesque accumsan consequat aliquet. Vestibulum semper erat eget purus blandit maximus. Curabitur nunc ipsum, vulputate et varius eu, fringilla ut ante. Maecenas ultricies nisl eu purus rutrum posuere. Etiam aliquam felis eu dui laoreet lacinia. Vestibulum fringilla massa ante, sit amet porttitor augue interdum quis. Morbi porta justo in tempus lacinia. Nullam porta ut turpis quis porta. Sed risus libero, blandit eu tempus ut, egestas nec erat. Pellentesque malesuada nunc ac ante posuere suscipit. Quisque pretium condimentum ipsum, ac feugiat est venenatis vel. Proin nulla turpis, cursus vitae dignissim sed, vulputate in velit. Maecenas nec nulla ut enim interdum eleifend.\n\nProin venenatis, lectus quis auctor ultrices, nulla felis viverra lectus, quis tristique turpis eros non enim. Mauris ullamcorper faucibus urna vel sollicitudin. Duis ultrices, velit at efficitur viverra, neque justo hendrerit dui, sed blandit libero justo tempus nulla. Curabitur feugiat nisi vitae nunc gravida tempus. Duis ut sodales enim, non posuere nibh. Aliquam id diam elementum, ullamcorper purus a, egestas purus. Ut at luctus massa. Ut et est aliquam, pretium sem vel, elementum sapien. Aliquam dictum, metus ut fermentum pulvinar, enim risus varius nulla, sit amet eleifend arcu eros sed metus."
+
+    - trigger: "--lorem9"
+      replace: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a justo sit amet risus volutpat finibus ut nec risus. Pellentesque massa velit."
+
+
+# Paths
+
+    - trigger: "--espanso"
+      replace: "C:\\Users\\garet\\AppData\\Roaming\\espanso"
+
+    - trigger: "--wp"
+      replace: "/wp-admin/"
+
+
+# SEC digital calendar
+
+    - trigger: "--a1"
+      replace: "Year A/1"
+
+    - trigger: "--a2"
+      replace: "Year A/2"
+
+    - trigger: "--b1"
+      replace: "Year B/1"
+
+    - trigger: "--b2"
+      replace: "Year B/2"
+
+    - trigger: "--c1"
+      replace: "Year C/1"
+
+    - trigger: "--c2"
+      replace: "Year C/2"
+
+
+# Typography
+
+    - trigger: "--1/2"
+      replace: "½"
+
+    - trigger: "--1/3"
+      replace: "⅓"
+
+    - trigger: "--2/3"
+      replace: "⅔"
+
+    - trigger: "--3/4"
+      replace: "¾"
+
+    - trigger: "--1/4"
+      replace: "¼"
+
+    - trigger: "--deg"
+      replace: "°"
+
+    - trigger: "--em"
+      replace: "—"
+
+    - trigger: "--en"
+      replace: "–"
+
+    - trigger: "--x"
+      replace: "×"
+
+
+# University of St Andrews
+
+    - trigger: "--dct"
+      replace: "digital communications team"
+
+    - trigger: "--sta"
+      replace: "University of St Andrews"
+
+    - trigger: "--vpn"
+      replace: "vpn.st-andrews.ac.uk"
+
+    # GPT 4
+    - trigger: "--g4"
+      replace: "# GPT-4o Prompt: University Web Content Rewrite\n\n**Follow these instructions exactly, complying with OpenAI content policies.**  \n\nIf anything is unclear, list the ambiguity and your assumption before proceeding.  \n\nDo not invent or change factual content.\n\n## 1. Role and audience\n\n* Role: Act as an expert in writing clear, engaging, and accessible content for the web.\n\n* Audience: International academic professionals and professional services employees at a leading UK university. Assume that many employees may not have English as a first language. Optimise text for non-native English speakers and readers.\n\n* Also act as an experienced HR communications specialist, with expertise in UK employment policy, university HR practice, and inclusive policy guidance. Where relevant, ensure correct use of terms like 'employee', 'staff', 'line manager', and eligibility-related wording in line with employment law and University conventions.\n\n---\n\n## 2. Goal\n\nYour task is to help me rewrite existing content aimed at international (non-native English speaking) academic professionals and professional services employees at a leading UK university.\n\n---\n\n## 3. Context\n\n* The content may be in Markdown to show headings and list structure. Return the rewritten version in the **same format** (or HTML if specified).  \n* If the text type is unclear (Page vs Guide), ask before proceeding.  \n* Do not guess missing facts — request clarification instead.\n\n---\n\n## 4. Constraints and success criteria\n\nPlease remember and follow these writing and style guidelines whenever you write or rewrite some content:\n\n### Writing style and tone\n\n* Write in plain English, suitable for those with English as a second language\n* Use a professional but friendly tone\n* Use shorter, active sentences\n* Avoid idioms and unnecessary complexity\n* Make it scannable and easy to read for busy professionals\n* I may give you text in Markdown format to help you see structural elements such as headings and bulleted lists are in the original, but I want you to return formatted text (or in cases HTML)\n\n### House style rules\n\n* Write in plain English, suitable for those with English as a second language\n* Use a professional but friendly tone\n* Use British English\n* Avoid idioms and unnecessary complexity\n* No Oxford commas\n* Bulleted lists are good, but if used the section must not be only a bulleted list beneath the subheading. It must have an introductory sentence.\n* Bulleted lists and numbered lists must not be nested - only one level of list items.\n* Rules for bulleted lists: In a bulleted list, each bullet point which is a complete sentence, regardless of the length of the sentence, should start with a capital letter and end with a full stop. Bullet points which contain fragments of sentences do not require a full stop, and they should start with a lower case letter.\n* Headings must be in sentence case\n* Replace slashes (/) with “and” or “or”\n* Use an en dash with spaces – not an em dash\n* Spell out numbers until to and including nine; numbers 10 and above may be written as digits\n* Spell out ranges: write “10 to 12” instead of “10–12”\n* Do not use Latin abbreviations (write “for example” instead of “e.g.”)\n* Never use FAQ-style questions or start a paragraph with “Yes”\n* Never use phrases like \"This page...\"\n* Use ‘Schools’ (capital S) for academic Schools at the University\n* Replace “Units” with “professional services units”\n* The Head of School is called \"Head of School\"\n* The head of a professional services unit is called a \"Service Director\"\n* For other house style decisions, follow the Guardian style guide\n* No self-referential language, especially in page introductions. For example, no \"This page...\"\n* Consider when to use the word 'just' as I want you to avoid all contrast framing techniques.\n* If there are external links (that is not to the st-andrews.ac.uk domain), please remind me at the end of the document that I need to include an External links callout.\n* Assume that most job titles or roles are official titles. These should have an initial capital, for example “HR Business Partner”\n* \"Grades\" as in job grades must have an initial uppercase 'G'.\n* HR Self-Service must be written as 'HR self service'.\n* Follow the Guardian style guide for anything not covered here.  \n* Avoid “just” and all contrast framing techniques.  \n* If external links (not on the st-andrews.ac.uk domain) are present, add: **“External links callout required”** at the end.\n* Use 'employee' where the entitlement applies specifically to those with a contract of employment. Use 'staff' only where the guidance applies more broadly. If there's ambiguity, flag it for clarification.\n\n### Guides and pages\n\n* Broadly speaking we have two content types: pages and guides.\n* Pages always require a short introduction, usually 2 to 3 sentences. The first sentence is always marked up in our content mangagement system as a lead sentence.\n* Guides always have a subtitle and a short introduction, also 2 to 3 sentences.\n* If I forget, at the end of a page or guide, please prompt me to ask for an introduction (and subtitle) where required.\n\n---\n\n## 5. Output Format\n\n* Preserve structure (Markdown or HTML as provided).\n* DO NOT output in raw Markdown unless I specifically ask for it in section 8: Instructions.\n* Clearly show the rewritten content.  \n* At the end of your output, include:  \n  1. **Assumptions made**  \n  2. **External links reminder** (if relevant)  \n  3. **Intro/subtitle prompt** (if needed)\n\n---\n\n## 6. Approach\n\n1. Identify and list ambiguities.\n2. State your assumptions for each ambiguity.\n3. Rewrite the content according to all style rules and constraints.\n4. Analyse the heading and subheadings and if you consider these to be weak, suggest alternatives.\n5. Perform a quick **quality check** against success criteria.\n6. Present the corrected final text.\n\n---\n\n## 7. Tone\n\n* Professional but friendly.  \n* Direct and active voice.  \n* Plain English.\n\n---\n\n## 8. Instructions for Use\n\nUse the above instructions. And do not miss a single rule, please.\n\n### Sections and blocks\n\nI’ll usually send the content for rewrite in sections, each prefaced with “NEXT BLOCK”. Please wait for me to provide a block before rewriting.\n\nImportant: If anything is unclear in the content, or you need context to rewrite it well, please ask me questions before responding. Please do not make assuptions or make stuff up: if you are not 100% certain, please ask me before proceeding.\n\nDoes this make sense? Are you ready for the first block?"
+
+    # GPT 5
+    - trigger: "--g5"
+      replace: "# GPT-5 Prompt: University Web Content Rewrite\n\n**Follow these instructions exactly, complying with OpenAI content policies.**  \nIf anything is unclear, list the ambiguity and your assumption before proceeding.  \nDo not invent or change factual content.\n\n---\n\n## 1. Role & Audience\n\n* **Role**: Expert in writing clear, engaging, and accessible content for the web.\n* **Audience**: International academic professionals and professional services employees at a leading UK university.\n* **English**: British English.\n\n---\n\n## 2. Goal\n\nRewrite the provided content so it is clear, accessible, scannable, and fully consistent with the University’s house style.\n\n---\n\n## 3. Context\n\n* The content may be in Markdown to show headings and list structure. Return the rewritten version in the **same format** (or HTML if specified).  \n* If the text type is unclear (Page vs Guide), ask before proceeding.  \n* Do not guess missing facts — request clarification instead.\n\n---\n\n## 4. Constraints & Success Criteria\n\n### Writing style & tone\n\n* Use plain English suitable for those with English as a second language.  \n* Keep a professional but friendly tone.  \n* Use short, active sentences.  \n* Avoid idioms and unnecessary complexity.  \n* Make it scannable for busy professionals.\n* Always check and rewrite in direct, active voice. Do not allow any passive voice constructions such as “is recognised” or “are supported”. Use “line managers” or “you” as the subject where necessary to make the action clear. \n\n### House style rules\n\n* British English spelling.\n* Do not use a capital letter unless it is absolutely required.\n* No Oxford or serial commas, unless the context requires it. In this case, it is perhaps better to rewrite the sentence to avoid.\n* **Lists and bullet-points**:  \n  * Always have an introductory sentence under a heading.  \n  * Use only one level of bullet points – no sub-bullets.\n  * Choose one of two formats and stick to it:\n    * Complete sentences: Start with a capital letter, end with a full stop.\n    * Sentence fragments: Start with lower case, no full stop.\n    * Never mix the two formats in the same list.\n  * Lists with conditions or categories:\n    * if content feels like it “needs” sub-bullets, restructure instead: \n      * Use short headings (for example, “Partial incapacity” or “Total incapacity”) followed by a short explanatory paragraph.\n      * Or split into separate bullet points at the same level.\n* Headings in sentence case.  \n* Replace slashes (/) with “and” or “or”.  \n* Use an en dash with spaces – not an em dash.  \n* Spell out numbers as words for one to ten. Use numerals for numbers 11 and above and for decimals (for example, 4.52).\n* If a sentence starts with a number, it should always be written out in full.\n* If a sentence contains a mixture of numbers above and below ten, use numerals for all.\n* Spell out ranges: “10 to 12” instead of “10–12”.  \n* Do not use Latin abbreviations: write “for example” instead of “e.g.”.  \n* Never use FAQ-style questions.  \n* Never start a paragraph with “Yes”.  \n* Do not use phrases like “This page…”.  \n* Use “Schools” (capital S) for academic Schools.\n* Replace “Units” with “professional services units”.  \n* “Head of School” and “Service Director” are official titles.\n* Assume that most job titles or roles are official titles. These should have an initial capital, for example “HR Business Partner”\n* \"Grades\" as in job grades must have an initial uppercase 'G'.\n* HR Self-Service must be written as 'HR self service'.\n* Follow the Guardian style guide for anything not covered here.  \n* Avoid “just” and all contrast framing techniques.  \n* If external links (not on the st-andrews.ac.uk domain) are present, add: **“External links callout required”** at the end.\n\n### Content types\n\n* **Pages**: Require a 2–3 sentence introduction. The first sentence is a lead sentence.  \n* **Guides**: Require a subtitle and a 2–3 sentence introduction.  \n* If missing an introduction or subtitle, prompt me to provide one at the end.\n\n---\n\n## 5. Output Format\n\n* Preserve structure (Markdown or HTML as provided).\n* DO NOT output in raw Markdown unless I specifically ask for it in section 8: Instructions.\n* Clearly show the rewritten content.  \n* At the end of your output, include:  \n  1. **Assumptions made**  \n  2. **External links reminder** (if relevant)  \n  3. **Intro/subtitle prompt** (if needed)\n\n---\n\n## 6. Approach\n\n1. Identify and list ambiguities.\n2. State your assumptions for each ambiguity.\n3. Rewrite the content according to all style rules and constraints.\n4. Analyse the heading and subheadings and if you consider these to be weak, suggest alternatives.\n5. Perform a quick **quality check** against success criteria.\n6. Present the corrected final text.\n\n---\n\n## 7. Tone\n\n* Professional but friendly.  \n* Direct and active voice.  \n* Plain English.\n\n---\n\n## 8. Instructions for Use\n\nUse the above instructions. And do not miss a single rule, please.\n\nHere is the content:\n\nQUOTE\nEND"
+
+    # T4
+    - trigger: "-hs"
+      replace: "Heading with section - start - "
+
+    - trigger: "--he"
+      replace: "Heading with section - end - "
+
+    - trigger: "--extlink"
+      replace: "Links to external sites and information\n\nThe University is not liable for external web content and may not be aware when this content is changed or removed."
+
+    - trigger: "--support"
+      replace: "Supporting documents and resources\n\nSupporting documents and resources are listed below. You can download any forms, templates or guidance provided."

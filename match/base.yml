@@ -210,7 +210,7 @@ matches:
     - trigger: "--flushed"
       replace: "😳"
 
-    - trigger: "--heart"
+    - trigger: "--hrt"
       replace: "❤️"
 
     - trigger: "--hug"

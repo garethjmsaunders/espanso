@@ -201,8 +201,8 @@ matches:
 
     # Emoji
 
-    - trigger: "--;)"
-      replace: "😉"
+    - trigger: "--cal"
+      replace: "📅"
 
     - trigger: "--cry"
       replace: "😢"
@@ -210,14 +210,32 @@ matches:
     - trigger: "--flushed"
       replace: "😳"
 
+    - trigger: "--heart"
+      replace: "❤️"
+
+    - trigger: "--hug"
+      replace: "🫂"
+
+    - trigger: "--laugh"
+      replace: "😂"
+
     - trigger: "--lol"
       replace: "😂"
 
     - trigger: "--rofl"
       replace: "🤣"
 
+    - trigger: "--tick"
+      replace: "✅"
+
+    - trigger: "--cross"
+      replace: "❌"
+
     - trigger: "--weep"
       replace: "😭"  
+
+    - trigger: "--wink"
+      replace: "😉"
 
 
     # Gareth

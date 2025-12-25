@@ -40,13 +40,13 @@ There is no sensitive or private data in this repository.
 
 Clone this repository into:
 
-`C:\Users<username>\AppData\Roaming\Espanso`
+`C:\Users<username>\AppData\Roaming\espanso`
 
 ### Linux
 
 Clone this repository into:
 
-`~/.config/Espanso`
+`~/.config/espanso`
 
 
 Espanso automatically reloads snippet changes when files are saved. If changes do not take effect immediately, or after pulling updates from Git, restart Espanso.

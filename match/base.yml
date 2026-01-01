@@ -85,6 +85,47 @@ matches:
 
 
     # Dates
+    # See https://strftime.org/ for style codes
+
+    # Now : Wednesday 24 December 2025, 21:15
+    - trigger: "--now"
+      replace: "{{now}}"
+      vars:
+        - name: now
+          type: date
+          params:
+            format: "%A %d %B %Y, %H:%M"
+
+
+    # Yesterday : Tuesday 23 December 2025
+    - trigger: "--yest"
+      replace: "{{yesterday}}"
+      vars:
+        - name: yesterday
+          type: date
+          params:
+            format: "%A %-d %B %Y"
+            offset: -86400
+
+    # Today : Wednesday 24 December 2025
+    - trigger: "--today"
+      replace: "{{today}}"
+      vars:
+        - name: today
+          type: date
+          params:
+            format: "%A %-d %B %Y"
+
+    # Tomorrow : Thursday 25 December 2025
+    - trigger: "--tom"
+      replace: "{{tomorrow}}"
+      vars:
+        - name: tomorrow
+          type: date
+          params:
+            format: "%A %-d %B %Y"
+            offset: 86400
+
 
     # Yesterday (ISO) 2025-12-23
     - trigger: "--dddc"
@@ -96,17 +137,6 @@ matches:
             format: "%Y-%m-%d"
             offset: -86400
 
-    # Yesterday Tuesday 23 December 2025
-    - trigger: "--yest"
-      replace: "{{yesterday}}"
-      vars:
-        - name: yesterday
-          type: date
-          params:
-            format: "%A %d %B %Y"
-            offset: -86400
-
-
     # Today (ISO) 2025-12-24
     - trigger: "--dddd"
       replace: "{{isodate}}"
@@ -115,16 +145,6 @@ matches:
           type: date
           params:
             format: "%Y-%m-%d"
-
-    # Today Wednesday 24 December 2025
-    - trigger: "--today"
-      replace: "{{today}}"
-      vars:
-        - name: today
-          type: date
-          params:
-            format: "%A %d %B %Y"
-
 
     # Tomorrow (ISO) 2025-12-25
     - trigger: "--ddde"
@@ -135,26 +155,6 @@ matches:
           params:
             format: "%Y-%m-%d"
             offset: 86400
-
-    # Tomorrow Thursday 25 December 2025
-    - trigger: "--tom"
-      replace: "{{tomorrow}}"
-      vars:
-        - name: tomorrow
-          type: date
-          params:
-            format: "%A %d %B %Y"
-            offset: 86400
-
-
-    # Now Wednesday 24 December 2025, 21:15
-    - trigger: "--now"
-      replace: "{{now}}"
-      vars:
-        - name: now
-          type: date
-          params:
-            format: "%A %d %B %Y, %H:%M"
 
 
     # Digital Shed45

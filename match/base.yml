@@ -85,7 +85,7 @@ matches:
 
 
     # Dates
-    # See https://strftime.org/ for style codes
+    # See https://docs.rs/chrono/latest/chrono/format/strftime/index.html for style codes
 
     # Now : Wednesday 24 December 2025, 21:15
     - trigger: "--now"

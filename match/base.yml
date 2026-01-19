@@ -7,8 +7,8 @@
 # Matches are the substitution rules, when you type the "trigger" string
 # it gets replaced by the "replace" string.
 
-# version:      2.0.0
-# updated:      Wednesday 24 December 2025
+# version:      2.0.1
+# updated:      Monday 19 January 2026
 # Windows path: C:\Users\garet\AppData\Roaming\espanso
 # Linux path:   /home/user/.config/espanso
 
@@ -256,10 +256,10 @@ matches:
       replace: "KY10 3UX"
 
     - trigger: "--sig"
-      replace: "--\n\nGareth J M Saunders\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n+44 (0)1333 451369 home\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"
+      replace: "--\n\nGareth J M Saunders\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"
 
     - trigger: "--rsig"
-      replace: "--\n\nThe Revd Gareth J M Saunders, BD (hons), MTh\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n+44 (0)1333 451369 home\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"    
+      replace: "--\n\nThe Revd Gareth J M Saunders, BD (hons), MTh\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"    
 
     - trigger: "--gjms"
       replace: "Gareth J M Saunders"

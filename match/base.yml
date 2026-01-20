@@ -256,10 +256,10 @@ matches:
       replace: "KY10 3UX"
 
     - trigger: "--sig"
-      replace: "--\n\nGareth J M Saunders\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"
+      replace: "--\n\nGareth J M Saunders\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"
 
     - trigger: "--rsig"
-      replace: "--\n\nThe Revd Gareth J M Saunders, BD (hons), MTh\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"    
+      replace: "--\n\nThe Revd Gareth J M Saunders, BD (hons), MTh\n\n14 Balcomie Green\nCrail\nANSTRUTHER\nKY10 3UX\nFife, Scotland, UK\n\n+44 (0)7732 356123 mobile\n\ngareth@garethjmsaunders.co.uk\nwww.garethjmsaunders.co.uk"    
 
     - trigger: "--gjms"
       replace: "Gareth J M Saunders"

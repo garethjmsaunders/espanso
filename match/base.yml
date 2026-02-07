@@ -402,6 +402,12 @@ matches:
       replace: "/wp-admin/"
 
 
+# PHP
+
+    - trigger: "--phpq"
+      replace: "Help me with a commercial WordPress plugin (PHP).\n\nRules:\n- Follow WordPress coding standards.\n- Use correct sanitisation/escaping and nonce/capability checks where relevant.\n- Keep changes minimal.\n- Output: (1) brief explanation, (2) exact before/after code blocks I can paste.\n\nContext:\n- File:\n- Function:\n- WP/PHP versions:\n- What I’m trying to do:\n- Error/warning (exact text + line):\n\nCode:\n[paste snippet]"
+
+
 # SEC digital calendar
 
     - trigger: "--a1"

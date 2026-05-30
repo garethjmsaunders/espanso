@@ -428,6 +428,156 @@ matches:
     - trigger: "--c2"
       replace: "Year C/2"
 
+    - trigger: "--saint"
+      replace: |
+        You are helping me draft a short saints' day or feast day entry for the Scottish Episcopal Church calendar.
+
+        The entry will be pasted into a digital calendar description field. It may also be read aloud at the start of a daily Eucharist or daily prayer.
+
+        Use the source material I provide as the primary source. You may cautiously check against known sources if the source material is thin, unclear or contradictory. However, do not silently add externally checked material into the draft entry. Put any additional checked material in a separate review note beneath the draft.
+
+        Do not invent details. Do not fill gaps with speculation. If a historical detail is uncertain, legendary, disputed or based on tradition, say so clearly.
+
+        The entry must follow the appropriate core structure below.
+
+        For saints and other historical Christians, use this order:
+
+        1. Who they were
+        - name
+        - role
+        - place
+        - century or dates
+
+        2. Their calling or path in life
+        - formation
+        - vocation
+        - office
+        - conversion
+        - community or context
+
+        3. Why they are remembered
+        - main work
+        - witness
+        - teaching
+        - holiness
+        - courage
+        - service
+        - reform
+        - mission
+
+        4. How their life ended, if known and relevant
+        - death
+        - martyrdom
+        - exile
+        - illness
+        - peaceful end
+
+        Do not make this section mandatory. Include it only if it matters to the person's witness or helps the entry land well when spoken.
+
+        5. Their lasting significance
+        - why the Church still remembers them
+        - what example they offer today
+
+        End with either:
+        - how they died, if that is central to their witness, or
+        - the reason they continue to be remembered, if that gives a stronger ending
+
+        For biblical feasts, church seasons and feasts rooted in the life of Jesus and the apostles, use this order:
+
+        1. What the feast commemorates
+        2. Why it matters theologically
+        3. Why the Church keeps it
+
+        For group commemorations, use this order:
+
+        1. Who is being remembered
+        2. What unites them
+        3. Why their witness matters
+        4. Their continuing significance
+
+        Write in a tone that is:
+        - clear
+        - warm
+        - dignified
+        - concise
+        - suitable for reading aloud
+        - devotional, but not sentimental
+        - specifically suitable for a Scottish Episcopal context, with broadly Anglican appeal and ecumenical sensitivity
+
+        Avoid:
+        - academic overload
+        - preachiness
+        - pious exaggeration
+        - unsupported legend presented as fact
+        - modern slang
+        - long strings of dates, places and offices
+        - too many subordinate clauses
+        - jargon unless essential
+        - Latin abbreviations such as c., e.g., i.e. and etc.
+
+        Use:
+        - plain English
+        - short sentences
+        - past tense for the person's life
+        - present tense for their continuing significance
+        - AD rather than CE
+        - century numbers as digits, for example "6th century"
+        - the most familiar English form of a name
+        - "around" or "about" instead of "circa" or "c."
+        - straight quotes only, not curly quotes
+
+        Do not use "Saint" in the body copy unless it is unavoidable. Refer to the person by name.
+
+        The feast class is for metadata only. Do not mention the feast class in the entry.
+
+        The output must be plain text only.
+
+        Required length:
+        100 to 200 words.
+
+        Required output format:
+
+        Draft entry:
+        [One or two short paragraphs only. No heading.]
+
+        Notes:
+        - Main facts used:
+        - Uncertain, legendary or contested details:
+        - Difficult or pastorally sensitive material:
+        - Additional checked material for review, if any:
+        - Confidence note:
+
+        Before finalising the draft, check that:
+        1. It is short enough to read aloud comfortably.
+        2. It clearly says who the person was, or what the feast commemorates.
+        3. It explains why the Church remembers this person or feast.
+        4. It includes the most important fact.
+        5. Any uncertainty is presented honestly.
+        6. The ending lands well when spoken.
+
+        Here is the entry brief.
+
+        Date:
+
+        Feast:
+        [Name, title or description, year if given]
+
+        Feast class:
+        [1, 2, 3, 4, 5 or 6]
+
+        Entry type:
+        [person / biblical feast / church season / group commemoration / other]
+
+        Source material:
+
+        Special notes:
+
+        Must mention:
+
+        Do not mention:
+
+        Uncertain or contested details:
+
 
 # Typography
 

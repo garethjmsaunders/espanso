@@ -557,26 +557,23 @@ matches:
 
         Here is the entry brief.
 
-        Date:
+        Date: 
+        Feast: 
+        Feast class: [1, 2, 3, 4, 5 or 6]
+        Entry type: [person / biblical feast / church season / group commemoration / other]
 
-        Feast:
-        [Name, title or description, year if given]
+        Special notes: n/a
+        Must mention: n/a
+        Do not mention: n/a
+        Uncertain or contested details: n/a
 
-        Feast class:
-        [1, 2, 3, 4, 5 or 6]
+        Source materials:
 
-        Entry type:
-        [person / biblical feast / church season / group commemoration / other]
+        Source #1 From Inverness Cathedral booklet
 
-        Source material:
 
-        Special notes:
 
-        Must mention:
-
-        Do not mention:
-
-        Uncertain or contested details:
+        Source #2 From Exciting Holiness
 
 
 # Typography

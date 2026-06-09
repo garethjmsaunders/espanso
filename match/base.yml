@@ -521,7 +521,7 @@ matches:
         - past tense for the person's life
         - present tense for their continuing significance
         - AD rather than CE
-        - century numbers as digits, for example "6th century"
+        - century numbers as words for 10 and below, but as digits for 11 and above, for example "sixth century" but "11th century"
         - the most familiar English form of a name
         - "around" or "about" instead of "circa" or "c."
         - straight quotes only, not curly quotes
@@ -533,7 +533,7 @@ matches:
         The output must be plain text only.
 
         Required length:
-        100 to 200 words.
+        150 to 250 words.
 
         Required output format:
 

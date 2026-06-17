@@ -525,6 +525,7 @@ matches:
         - the most familiar English form of a name
         - "around" or "about" instead of "circa" or "c."
         - straight quotes only, not curly quotes
+        - only use double quotes for reported speech or written quotations
 
         Do not use "Saint" in the body copy unless it is unavoidable. Refer to the person by name.
 
@@ -559,8 +560,8 @@ matches:
 
         Date: 
         Feast: 
-        Feast class: [1, 2, 3, 4, 5 or 6]
-        Entry type: [person / biblical feast / church season / group commemoration / other]
+        Feast class: 6
+        Entry type: person / biblical feast / church season / group commemoration / other
 
         Special notes: n/a
         Must mention: n/a
@@ -574,6 +575,10 @@ matches:
 
 
         Source #2 From Exciting Holiness
+
+
+
+        Source #3 Wikipedia
 
 
 # Typography
